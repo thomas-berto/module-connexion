@@ -8,7 +8,12 @@
 		<title>Inscription</title>
 	</head>
 <body >	<header>
-	<?php include('header.php') ?>
+	<?php include('header.php');
+	if(isset($_SESSION['login']) || isset($_SESSION['password']))
+	{
+		header('Location: index.php');
+	}
+?>
 </header>
 	
 		
@@ -45,9 +50,33 @@
 		$pass = sha1($pass);
 		$pass2 = $_POST['pass2'];
 		$connexion = mysqli_connect("localhost", "root", "", "moduleconnexion");
-		$requete = "INSERT INTO utilisateurs(login, prenom, nom, password) VALUES ('$login', '$prenom', '$nom','$pass')";
-		$query = mysqli_query($connexion, $requete);
-		mysqli_close($connexion);
-		header('Location: connexion.php');
-	}
-	?>
+				$requete = "SELECT login FROM utilisateurs WHERE login = '$login'";
+		$query = mysqli_query($connexion, $requete);	
+		$resultat = mysqli_num_rows($query); 
+
+		
+		
+
+                    if ($resultat==1) 
+                    {	
+
+
+                    ?>
+                    <h2 class='titre'><p>Ce Login est déjà prit</p></h2>
+					<?php 
+                      }
+  elseif ($_POST["pass"] != $_POST["pass2"]) 
+              {
+  ?>
+	 <h2 class='titre'> <p>Attention ! Mot de passe différents</p></h2>
+  <?php
+              }
+  else 
+  {
+	  $requete2 = "INSERT INTO utilisateurs(login, prenom, nom, password) VALUES ('$login', '$prenom', '$nom','$pass')";
+	  $query2 = mysqli_query($connexion, $requete2);
+	  header('Location:connexion.php');
+  }
+}
+
+?>	

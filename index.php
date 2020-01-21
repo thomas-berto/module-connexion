@@ -26,8 +26,8 @@
 					}
 					else{
 						echo " <section><h2>Rentrer dans la Matrice </h2></section>
-				<section><nav><ul class='titre'><li><a href='inscription.php'>Inscrivez-vous</a></li>
-						<li><a href='connexion.php'>connectez-vous</a></li>
+				<section><nav><ul class='titre'><li class='lee'><a href='inscription.php'>Inscrivez-vous</a></li>
+						<li class='lee'><a href='connexion.php'>connectez-vous</a></li>
 						</ul></nav></section>
 						";
 					}

@@ -33,7 +33,9 @@ text-align: center;
 }
 /*index*/
 
-
+.lee
+{ 
+}
 
 section
 {text-align: center;
@@ -70,6 +72,7 @@ margin: auto;}
 
 
 }
+
 
 /*connexion inscription */
 form{
@@ -127,4 +130,24 @@ justify-content: center;    }
     padding:4px;
     vertical-align:middle;
     }
+
+    li
+    {margin-left: 10%;}
     
+    .coco{
+        color: white;
+        text-align: center;
+        animation: titre .75s ease-out infinite;
+        text-shadow: 0px 0px 5px rgb(134, 134, 134);
+         }
+         
+         @keyframes titre {
+           from {
+             text-shadow:0px 0px 10px rgb(181, 212, 243),
+               0px 0px 10px rgb(197, 226, 255), 
+               0px 0px 25px rgb(177, 212, 247),
+               0px -10px 100px rgb(230, 169, 194),
+               0px -10px 100px rgb(247, 161, 197);
+           }
+         }
+       }

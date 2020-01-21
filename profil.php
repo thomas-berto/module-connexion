@@ -10,7 +10,10 @@
 	<body class ="body-profile">
 		<header>
 			
-            <?php include('header.php') ;
+			<?php include('header.php') ;
+			if(!isset($_SESSION['login'])){header('Location: index.php');}
+
+			
 
 ?>
 		</header>
@@ -78,7 +81,7 @@ if(isset($_POST['modifier']))
 				$_SESSION['login'] = $_POST['login'];
 				$modif_login = true;
 			}{
-				echo "<div class='coco'>Login modifier avec succès</div>";}
+				echo "<div class='coco'><p> Login modifier avec succès</p></div>";}
 		
         }
         if($nom != $req2['nom'])
@@ -89,7 +92,7 @@ if(isset($_POST['modifier']))
 			$_SESSION['nom'] = $_POST['nom'];
 			$modif_nom = true;
 		}	{
-			echo "<div class='coco'>Nom modifier avec succès</div>";}
+			echo "<div class='coco'><p>Nom modifier avec succès</p></div>";}
     
 
     if($prenom != $req2['prenom'])
@@ -100,7 +103,7 @@ if(isset($_POST['modifier']))
         $_SESSION['prenom'] = $_POST['prenom'];
         $modif_prenom = true;
     }	{
-        echo "<div class='coco'>prenom modifier avec succès</div>";}
+        echo "<div class='coco'><p>prenom modifier avec succès</p></div>";}
 }
 }
 mysqli_close($connexion);
