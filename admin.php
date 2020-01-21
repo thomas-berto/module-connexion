@@ -9,8 +9,15 @@
 	
 	<body>
 		<header>
-		<?php include('header.php') ;
-		if(!isset($_SESSION['login'])){header('Location: index.php');}
+		<?php 
+		include('header.php') ;
+		if(isset($_SESSION['login']))
+
+	{   if(($_SESSION['login'] !== 'admin'))
+		{
+			header('Location: index.php');
+		}
+	} 
 		?>
 		</header>
 		
