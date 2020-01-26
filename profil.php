@@ -47,10 +47,14 @@ $req2 = mysqli_fetch_assoc($req);
 			</section>
 		
 		
-		<footer>
-			
-			
-		</footer>
+		
+<foooter>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>		
 	</body>	
 </html>
 <?php

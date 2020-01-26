@@ -11,6 +11,7 @@
 		<header>
 		<?php 
 		include('header.php') ;
+		if(!isset($_SESSION['login'])){header('Location: index.php');}
 		if(isset($_SESSION['login']))
 
 	{   if(($_SESSION['login'] !== 'admin'))
@@ -57,7 +58,14 @@
 					?>
 				</table>
 					</section>
-		
+	
+<foooter>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>			
 
 	</body>
 </html>

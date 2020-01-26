@@ -10,7 +10,8 @@ body{
 
 
 }
-/* HEADER */
+
+/* HEADER FOOTER */
 
 header{
     background-image: linear-gradient(rgb(148, 186, 243), rgb(184, 133, 133) 50%, rgb(138, 114, 114) 50%);
@@ -31,10 +32,12 @@ justify-content:  space-around ;
 text-align: center;
 
 }
+
+
 /*index*/
 
-.lee
-{ 
+.mama
+{ margin-top: 100px;
 }
 
 section
@@ -47,6 +50,8 @@ margin: auto;}
     width: 200px;
     height: 200px;
 }
+
+
 
 .titre
 
@@ -117,7 +122,8 @@ text-align: center;
     width:100%;
     max-width:700px;
     min-width:400px;
-justify-content: center;    }
+justify-content: center;   
+}
     
 
     
@@ -151,3 +157,10 @@ justify-content: center;    }
            }
          }
        }
+footer{    display: grid;
+  grid-template-columns: 50px ;
+  grid-gap: 10px;
+}
+       
+     
+    

@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="index.css"/>
 		<title>Index</title>
 	</head>
-	<body >
+	<body>
 		<header>
 		<?php include('header.php') ?>
 
@@ -18,7 +18,7 @@
 					{
 						echo "<section><h2 class='titre'>Bienvenue ".$_SESSION['login']."  dans la MAMA</h2></section>
 
-						<section><h3>Tenez-vous pret</h3>
+						<section class='mama'><h3>Tenez-vous pret</h3>
 				<img  class='img'src='http://idata.over-blog.com/0/25/52/69/2015/53817.gif'>
 				<h3>Ca arrive</h3> </img>
 			
@@ -32,8 +32,14 @@
 						";
 					}
 				?>
-				
-				
-				
+
+
+<foooter>
+				<section>
+				<article>
+				Copyright © 2020 All rights reserved
+			</article>
+		</section>
+	</footer>		
 	</body>	
 </html>
